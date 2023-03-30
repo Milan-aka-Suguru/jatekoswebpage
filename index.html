@@ -9,4 +9,20 @@
 <body>
     
 </body>
+<script>
+    function encryptString(str, key) {
+        let result = "";
+        for (let i = 0; i < str.length; i++) {
+          let charCode = str.charCodeAt(i);
+          charCode += key;
+          result += String.fromCharCode(charCode);
+        }
+        return result;
+      }
+      let originalString = "Hello, world!";
+let encryptionKey = 591;
+let encryptedString = encryptString(originalString, encryptionKey);
+console.log(encryptedString);
+
+</script>
 </html>
