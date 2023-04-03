@@ -11,10 +11,16 @@
                 <span onclick="document.getElementById('login-modal').style.display='none'" class="close">&times;</span>
                 <h2>Login Form</h2>
                 <form>
-                    <label id="jelszo">jelszo</label>
-                    <button onclick="bej(document.cookie,document.getElementById('jelszo').value)">bejelentkezes</button>
+                    <input type='text' id="jelszo" placeholder="Jelszo">
+                    <button onclick="bej(document.getElementById('jelszo').value)">bejelentkezes</button>
                 </form>
             </div>
+        </div>
+        <input type="text" onchange="kereses(this.value,document.querySelector('#jatekok'))">
+        <div id="jatekok" class="jatekok">
+          <div id="asd">
+            <img src="" alt="asd">
+          </div>
         </div>
 </body>
 <style>
@@ -65,8 +71,28 @@
       }
       let originalString = "Hello, world!";
 let encryptionKey = 591;
-let encryptedString = encryptString(originalString, encryptionKey);
-console.log(encryptedString);
+let jelszo = encryptString('alma',encryptionKey);
+console.log("alma a jelszó, "+jelszo)
+function kereses(v,m){
+ for(let i = 0;i<m.children.length;i++){
+   let temp = ''
+    for(let j = 0; j < v.length;j++){
+      temp += m.children[i].id[m.children[i].id.search(v[j])]
+      }
+   if (temp == v){
+     m.children[i].style.display = 'inline';
+   }
+   else{
+    m.children[i].style.display = 'none';
+   }
+ }
+}
+function bej(jel){
+    if ((jel != null || jel != "")&& encryptString(jel,encryptionKey) == jelszo ){
+      document.cookie = 'bejelent=true;expires=Thu, 18 Dec 2024 12:00:00 UTC';      
+    }
+document.getElementById('login-modal').style.display = 'none'
+  }
 
 </script>
 </html>
