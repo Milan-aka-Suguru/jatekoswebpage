@@ -13,13 +13,26 @@
                 <form>
                     <input type='text' id="jelszo" placeholder="Jelszo">
                    
-                    <input type='file' id="kkk" />
+                    <button onclick="bej(document.getElementById('jelszo').value)">bejelentkezes</button>
                 </form>
                
             </div>
         </div>
-        <button onclick="bej(document.getElementById('jelszo').value)">bejelentkezes</button>
-        <button onclick="adddiv()">+</button>
+        <div id="beker" class="bekeress">
+          <div class="bekeres-contetn">
+              <span onclick="document.getElementById('beker').style.display='none'" class="close">&times;</span>
+              <h2>Login Form</h2>
+              <form>
+                  <input type='file' accept="image/jpeg,image/png,image/jpg" id="kkk" />
+                 <input type="text" id="ss" placeholder="Cim">
+                  <button onclick="xyz(document.getElementById('ss').value, document.getElementById('kkk').value)">hozaad</button>
+              </form>
+             
+          </div>
+      </div>
+       
+        <button onclick="document.getElementById('beker').style.display = 'block'">+</button>
+       
         <input type="text" onchange="kereses(this.value,document.querySelector('#jatekok'))">
         <div id="jatekok" class="jatekok">
           <div id="asd">
@@ -266,7 +279,17 @@ footer {
 	overflow: auto;
 	background-color: rgba(0,0,0,0.4);
 }
-
+#beker {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(255, 255, 255, 0.4);
+}
 .modal-content {
 	background-color: #fefefe;
 	margin: 15% auto;
@@ -374,35 +397,23 @@ var k = getCookie("hany")
 if(k == ""){
     k = 0 
 }
-function bekeres(){
-        var kecske = true
-        while(kecske){
-        var cirmos = prompt('Kérem a szöveget.',null)
-        if (cirmos == "null" || cirmos == "" || cirmos == " "){
-            continue
-        }
-        else{
-            if(cirmos === null){
-                return false
-            }
-            else{
-            return cirmos
-        }}
-    }}
-    function adddiv(){
+
+    function xyz(kutya,kep){
     let c = document.createElement('div')
     let f = document.createElement("img")
     k += 1
     f.setAttribute("id",k)
+    f.setAttribute("src",kep)
     c.appendChild(f)
-    var kutya = bekeres()
+    
     c.setAttribute('class','product-card')
     document.getElementById("nagydiv").appendChild(c)
     var b =  getCookie("konyvtar")
     L("kkk",k)
     let d = document.createElement("p")
-    d.append(kutya)
+    d.append(document.createTextNode(kutya))
     c.appendChild(d)
+    console.log(kutya,kep,f,c)
     if(b != ""){
     b = document.getElementById("nagydiv").innerHTML
 
@@ -441,47 +452,5 @@ function L(input,t) {
   }
   return "";
 }
-var k = getCookie("hany")
-if(k == ""){
-    k = 0 
-}
-function bekeres(){
-        var kecske = true
-        while(kecske){
-        var cirmos = prompt('Kérem a szöveget.',null)
-        if (cirmos == "null" || cirmos == "" || cirmos == " "){
-            continue
-        }
-        else{
-            if(cirmos === null){
-                return false
-            }
-            else{
-            return cirmos
-        }}
-    }}
-    function adddiv(){
-    let c = document.createElement('div')
-    let f = document.createElement("img")
-    k += 1
-    f.setAttribute("id",k)
-    c.appendChild(f)
-    var kutya = bekeres()
-    c.setAttribute('class','ccc')
-    document.getElementById("nagydiv").appendChild(c)
-    var b =  getCookie("konyvtar")
-    L("kkk",k)
-    let d = document.createElement("p")
-    d.append(kutya)
-    c.appendChild(d)
-    if(b != ""){
-    b = document.getElementById("nagydiv").innerHTML
-
-    }
-    else{
-        document.cookie += "konyvtar="+ document.getElementById("nagydiv").innerHTML
-    }
-    document.cookie +=k
-    }
 </script>
 </html>
