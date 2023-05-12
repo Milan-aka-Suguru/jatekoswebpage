@@ -2,455 +2,316 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Form</title>
-</head>
-<body>
-            <button onclick="if(getCookie('bejelent')== 'true'){document.getElementById('login-modal').style.display='none';alert('Már belépett.');}else{document.getElementById('login-modal').style.display='block'}">Login</button>
-            <div id="login-modal" class="modal">
-            <div class="modal-content">
-                <span onclick="document.getElementById('login-modal').style.display='none'" class="close">&times;</span>
-                <h2>Login Form</h2>
-                <form>
-                    <input type='text' id="jelszo" placeholder="Jelszo">
-                   
-                    <button onclick="bej(document.getElementById('jelszo').value)">bejelentkezes</button>
-                </form>
-               
-            </div>
-        </div>
-        <div id="beker" class="bekeress">
-          <div class="bekeres-contetn">
-              <span onclick="document.getElementById('beker').style.display='none'" class="close">&times;</span>
-              <h2>Login Form</h2>
-              <form>
-                  <input type='file' accept="image/jpeg,image/png,image/jpg" id="kkk" />
-                 <input type="text" id="ss" placeholder="Cim">
-                  <button onclick="xyz(document.getElementById('ss').value, document.getElementById('kkk').value)">hozaad</button>
-              </form>
-             
-          </div>
-      </div>
-       
-        <button onclick="document.getElementById('beker').style.display = 'block'">+</button>
-       
-        <input type="text" onchange="kereses(this.value,document.querySelector('#jatekok'))">
-        <div id="jatekok" class="jatekok">
-          <div id="asd">
-            <img src="" alt="asd">
-          </div>
-        </div>
-          <header>
-            <h1>Welcome to My Web Shop</h1>
-            <nav>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#cart">Cart</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-              </ul>
-            </nav>
-          </header>
-          <main id="home">
-            <section>
-              <h2>Featured Products</h2>
-              <div class="product-list">
-                <!-- Display featured products here -->
-              </div>
-            </section>
-          </main>
-          <main id="products">
-            <section>
-                <div class="product-catalog">
-                    <div id="nagydiv">
-                    <div class="product-card">
-                      
-                      
-                      <h3> Assassin’s Creed: Syndicate </h3>
-                      <img src="kepek/acs.jpg" alt="asaincreed" class="kep">
-                      <p>Az Assassin’s Creed: Syndicate egy külső nézetes akció, kaland videójáték. Kiadója a Ubisoft. Megjelent 2015. november 19-én PC-re és konzolra. A játék magyar felirattal is rendelkezik. Az Assassin's Creed: Syndicate az Assassin's Creed sorozat 9-dik játéka. A játék jelenkora 2015-ben játszódik</p>
-                      
-                    </div>
-                    <div class="product-card">
-                      <h3>Counter-Strike: Global Offensive</h3>
-                      <img src="kepek/csgo.jpg" alt="asaincreed" class="kep">
-                      <p>A Counter-Strike: Global Offensive online csapatalapú first-person shooter, amelyet a Valve Corporation és a Hidden Path Entertainment fejleszt, akik korábban a Counter-Strike: Source frissítéseiért is feleltek.</p>
-                      
-                    </div>
-                    <div class="product-card">
-                      <h3>forest</h3>
-                      <img src="kepek/forest.jpg" alt="asaincreed" class="kep">
-                      <p>A The Forest egy belső nézetes túlélőhorror videójáték az Endnight Games fejlesztésében Windows platformra. A játék pre-alpha verziója a Steam Early Accessen keresztül jelent meg 2014. május 30-án.</p>
-                     
-                    </div>
-                    <div class="product-card">
-                      <h3>Left 4 Dead 2</h3>
-                      <img src="kepek/l4d2.jpg" alt="asaincreed" class="kep">
-                      <p>A Left 4 Dead 2 egy belső/FPS nézetű akciójáték. A Valve Corporation fejlesztette és adta ki 2009-ben. Európában november 17-én jelent meg. A játék a Source Engine-t használja. Steamen fut. Megjelent Microsoft Windows 2000-re, Windows XP-re, Windows Vistára, Windows 7-re és Xbox 360-ra is. </p>
-                      
-                    </div>
-                    <div class="product-card">
-                      <h3>League of Legends</h3>
-                      <img src="kepek/lol.jpg" alt="asaincreed" class="kep">
-                      <p>A League of Legends valós idejű stratégiai játék, illetve online többjátékos csatamező, melyet a Warcraft III: The Frozen Throne videójátékhoz készült Defense of the Ancients mod ihletett. A játék fejlesztője és egyben kiadója a Riot Games; Kínában a Tencent Holdings forgalmazza.</p>
-                      
-                    </div>
-                    <div class="product-card">
-                        <h3>Team Fortress 2</h3>
-                        <img src="kepek/tf2.jpg" alt="asaincreed" class="kep">
-                        <p>A Team Fortress 2 egy ingyenes, csapat-alapú, többjátékos, FPS videójáték, amelyet a Valve Corporation fejlesztett ki, a Team Fortress Classic folytatásaként. Wikipédia</p>
-                        
-                      </div>
-                    <div class="product-card">
-                        <h3> Phasmophobia</h3>
-                        <img src="kepek/phas.jpg" alt="asaincreed" class="kep">
-                        <p>A Phasmophobia egy indie túlélőhorror videójáték, amit a Kinetic Games fejlesztett és adott ki.</p>
-                        
-                      </div>
-                    <div class="product-card">
-                        <h3>Resident Evil 7</h3>
-                        <img src="kepek/revii.jpg" alt="asaincreed" class="kep">
-                        <p>A Resident Evil 7: Biohazard a Capcom videójátékgyártó cég Resident Evil című túlélőhorror-sorozatának 7. része.</p>
-                        
-                      </div>
-                    <div class="product-card">
-                        <h3>Ready or Not</h3>
-                        <img src="kepek/ron.jpg" alt="asaincreed" class="kep">
-                        <p>A Ready or Not egy taktikai lövöldözősjáték az írországi székhelyű VOID Interactive-tól. A Steam korai hozzáférésen keresztül jelent meg 2021. december 17-én.</p>
-                        
-                      </div>
-                    <div class="product-card">
-                        <h3>The Witcher</h3>
-                        <img src="kepek/tw3.jpg" alt="asaincreed" class="kep">
-                        <p>Angolról fordítva-A The Witcher egy fantasy akció-szerepjáték-sorozat, amelyet a CD Projekt Red fejlesztett és a CD Projekt adott ki. Andrzej Sapkowski lengyel író azonos című könyvsorozatán alapul, amely a könyvek történetének nem kanon</p>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  
-            </section>
-          </main>
-          <main id="cart">
-            <section>
-              <h2>Shopping Cart</h2>
-              <div class="cart-items">
-                <!-- Display cart items here -->
-              </div>
-              <div class="cart-total">
-                <!-- Display cart total here -->
-              </div>
-              <div class="checkout">
-                <!-- Include checkout button or form here -->
-              </div>
-            </section>
-          </main>
-          <main id="about">
-            <section>
-              <h2>About Us</h2>
-              <p><!-- Write about your web shop here --></p>
-            </section>
-          </main>
-          <main id="contact">
-            <section>
-              <h2>Contact Us</h2>
-              <form>
-                <!-- Include contact form here -->
-              </form>
-            </section>
-          </main>
-</body>
-<style>
-  .kep{
-    height: 300px;
-    width: 500px;
-    align-content: center;
-  }
-
-  /* styles.css */
-
-/* Reset some default styles */
-body, figure, h1, h2, h3, h4, h5, h6, p, ol, ul, li, blockquote, dl, dd {
-  margin: 0;
-  padding: 0;
-}
-
-/* Set body font and background */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-}
-
-/* Header styles */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-}
-
-h1 {
-  font-size: 24px;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav li {
-  display: inline;
-  margin-right: 10px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Main content styles */
-main {
-  padding: 20px;
-}
-
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-}
-
-.product-item {
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-.product-item img {
-  max-width: 100%;
-}
-
-.cart-items {
-  background-color: #fff;
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-.cart-item {
-  margin-bottom: 10px;
-}
-
-.cart-item img {
-  max-width: 100px;
-  vertical-align: middle;
-}
-
-.cart-item .product-name {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-.cart-total {
-  margin-top: 10px;
-}
-
-.checkout {
-  margin-top: 10px;
-}
-
-/* Footer styles */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0,0,0,0.4);
-}
-#beker {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(255, 255, 255, 0.4);
-}
-.modal-content {
-	background-color: #fefefe;
-	margin: 15% auto;
-	padding: 20px;
-	border: 1px solid #888;
-	width: 30%;
-}
-
-.close {
-	color: #aaa;
-	float: right;
-	font-size: 28px;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-	color: black;
-	text-decoration: none;
-	cursor: pointer;
-}
-</style>
-<script>
-    function encryptString(str, key) {
-        let result = "";
-        for (let i = 0; i < str.length; i++) {
-          let charCode = str.charCodeAt(i);
-          charCode += key;
-          result += String.fromCharCode(charCode);
-        }
-        return result;
-      }
-      let originalString = "Hello, world!";
-let encryptionKey = 591;
-let jelszo = encryptString('alma',encryptionKey);
-console.log("alma a jelszó, "+jelszo)
-function kereses(v,m){
- for(let i = 0;i<m.children.length;i++){
-   let temp = ''
-    for(let j = 0; j < v.length;j++){
-      temp += m.children[i].id[m.children[i].id.search(v[j])]
-      }
-   if (temp == v){
-     m.children[i].style.display = 'inline';
-   }
-   else{
-    m.children[i].style.display = 'none';
-   }
- }
-}
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-function bej(jel){
-    if ((jel != null || jel != "" || getCookie('bejelent')== "" || getCookie('bejelent')!= true) && encryptString(jel,encryptionKey) == jelszo ){
-      document.cookie = 'bejelent=true;expires=Thu, 18 Dec 2024 12:00:00 UTC';      
-      alert('Sikeres belépés.')
-      document.getElementById('login-modal').style.display = 'none'
-    }else if((jel != null || jel != "" || getCookie('bejelent')== "" || getCookie('bejelent')== true) && encryptString(jel,encryptionKey) != jelszo ){
-      alert('Hibás jelszó.')
-    }    
-  }
-
-  function L(input,t) {
-    if (input.files && input.files[0]) {
-        console.log(input.files[0].input.files,t,input,document.getElementById(t))
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $(t).attr('src', e.target.result).width(150).height(200);
-        };
-        reader.readAsDataURL(input.files[0]);
-        document.getElementById(t).src = input.files[0]
-
-    }
-}
-  function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-var k = getCookie("hany")
-if(k == ""){
-    k = 0 
-}
-
-    function xyz(kutya,kep){
-    let c = document.createElement('div')
-    let f = document.createElement("img")
-    k += 1
-    f.setAttribute("id",k)
-    f.setAttribute("src",kep)
-    c.appendChild(f)
-    
-    c.setAttribute('class','product-card')
-    document.getElementById("nagydiv").appendChild(c)
-    var b =  getCookie("konyvtar")
-    L("kkk",k)
-    let d = document.createElement("p")
-    d.append(document.createTextNode(kutya))
-    c.appendChild(d)
-    console.log(kutya,kep,f,c)
-    if(b != ""){
-    b = document.getElementById("nagydiv").innerHTML
-
-    }
-    else{
-        document.cookie += "konyvtar="+ document.getElementById("nagydiv").innerHTML
-    }
-    document.cookie +=k
-    }
-    
-
-function L(input,t) {
-    if (input.files && input.files[0]) {
-        console.log(input.files[0].input.files,t,input,document.getElementById(t))
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $(t).attr('src', e.target.result).width(150).height(200);
-        };
-        reader.readAsDataURL(input.files[0]);
-        document.getElementById(t).src = input.files[0]
-
-    }
-}
+	<title>Játékok</title>
+  <script>
     function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for(let i = 0; i <ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
     }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
+    return "";
+  }
+  function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 *1000));
+        var expires = "; expires=" + date.toGMTString();
+    } else {
+        var expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+    var k = getCookie("hany")
+  if(k == ""){
+      k = 0 
+  }
+  window.onload = gen
+  function gen(){
+    document.getElementById('jat').innerHTML += getCookie("konyvtar")
+    let b = localStorage.getItem('imgData')
+    let c = b.split('***')
+    let a = document.getElementsByTagName('img')
+    for(let i = 0; a.length>a;i++){
+      if(a[i].src == ''){
+      a[i].src =  "data:image/png;base64,"+c[0]
+      c = c.slice(1)
+      }
     }
   }
-  return "";
+  function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL;
 }
-</script>
+    function felvesz(c,kk){
+      let d = document.createElement('div')
+      let h = document.createElement('h3')
+      let i = document.createElement('img')
+      let p = document.createElement('p')
+      let sz = document.createTextNode(c)
+      h.innerHTML = c
+      d.setAttribute('class','product-card')
+      p.appendChild(sz)
+      const file = kk;
+      const reader = new FileReader();
+      reader.onload = () => {
+        i.src = reader.result;
+      }
+      let asd = reader.readAsDataURL(file);
+      d.appendChild(h)
+      d.appendChild(i)
+      d.appendChild(p)    
+      let td = document.createElement('td')
+      td.appendChild(d)
+
+      if(k % 2 == 0 || k == 0){
+        let tr = document.createElement('tr')
+        tr.appendChild(td)
+        document.getElementById('jat').appendChild(tr)
+      }
+      else{  
+        console.log(document.getElementById('jat').children[document.getElementById('jat').children.length-1])
+        document.getElementById('jat').children[document.getElementById('jat').children.length-1].appendChild(td)
+      }
+      createCookie("konyvtar",getCookie('konyvtar')+td.innerHTML)
+      localStorage.setItem("imgData",localStorage.getItem('imgData')+"***"+document.getElementById('jat').children[document.getElementById('jat').children.length-1].getElementsByTagName('img').src)
+      k++
+      createCookie('hany',k)
+    }
+      function encryptString(str, key) {
+          let result = "";
+          for (let i = 0; i < str.length; i++) {
+            let charCode = str.charCodeAt(i);
+            charCode += key;
+            result += String.fromCharCode(charCode);
+          }
+          return result;
+        }
+  let encryptionKey = 591;
+  let jelszo = encryptString('alma',encryptionKey);
+  console.log("alma a jelszó, "+jelszo)
+  function kereses(v,m){
+    for(let i = 0; m.length > i; i++){
+      console.log(m[i].parentElement,m[i].innerHTML.search(v))
+      if(m[i].innerHTML.search(v)>-1){
+        m[i].parentElement.style.display = 'block';
+      }
+      else{
+        m[i].parentElement.style.display = 'none';
+      }
+    }
+  }
+  
+  function bej(jel){
+      if ((jel != null || jel != "" || getCookie('bejelent')== "" || getCookie('bejelent')!= true) && encryptString(jel,encryptionKey) == jelszo ){
+        document.cookie = 'bejelent=true;';      
+        alert('Sikeres belépés.')
+        document.getElementById('popup').style.display = 'none'
+      }else if((jel != null || jel != "" || getCookie('bejelent')== "" || getCookie('bejelent')== true) && encryptString(jel,encryptionKey) != jelszo ){
+        alert('Hibás jelszó.')
+      }    
+    }
+  
+    function L(input,t) {
+      if (input.files && input.files[0]) {
+          console.log(input.files[0].input.files,t,input,document.getElementById(t))
+          var reader = new FileReader();
+          reader.onload = function (e) {
+              $(t).attr('src', e.target.result).width(150).height(200);
+          };
+          reader.readAsDataURL(input.files[0]);
+          document.getElementById(t).src = input.files[0]
+  
+      }
+  }
+  
+  </script>
+</head>
+<style>
+  :root{
+    --maxkepszel: 200px;
+  }
+  body{
+    max-width: 1920px;
+    max-height: 1080px;
+    min-width: calc(1920px/2);
+    min-height: calc(1080px/2);    
+  }
+  .product-card>img,.product-card1>img{
+    max-width: var(--maxkepszel);
+  }
+  .product-card{
+    float: left;
+    display: inline;
+    max-width: 35vw;
+    background-color: black;
+    color: white;
+    border: 1vh;
+    border-radius: 2vh;
+    margin: 2vh;
+  }
+  .product-card>*{
+    margin: 2vh;
+  }
+  #jatekok{
+    min-width: 70vw;
+    max-width: 75vw;
+    background-color: grey;
+    border: 1vh;
+    border-radius: 7vh;    
+  }
+  #cim{
+    font-size: 5vh;
+    color: white;
+    background-color: black;
+    border: 1vh;
+    border-radius: 10vh;
+  }
+  #popup,#feltolt{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.411);
+  }
+  #mezo,#asd{
+    top: 40vh;
+    background-color: black;
+    color: white;
+  }
+</style>
+<body onload="gen()">
+  <div id="popup">
+    <div id="mezo" align="center">
+    <input type="text" name="jelszo" id="jelszo" placeholder="Kérem a jelszót!">
+    <button onclick="bej(document.getElementById('jelszo').value)">Ellenőrzés</button>
+  </div>
+  </div>
+  <div id="feltolt">
+    <div id="asd">
+      <input type="file" id="kep" accept="image/png, image/jpg, image/jpeg">
+      <input type="text" id="cm" placeholder="Kérem a játék címét!">
+      <button onclick="if(document.getElementById('cm').value != '' || document.getElementById('kep').files[0] != ''){felvesz(document.getElementById('cm').value,document.getElementById('kep').files[0])};document.getElementById('feltolt').style.display = 'none';">Felvesz</button>
+    </div>
+  </div>
+  <div id="felsobar">
+    <button onclick="if(getCookie('bejelent')==''){document.getElementById('popup').style.display = 'block';}">Bejelentkezés</button>
+    <button onclick="if(getCookie('bejelent')!=''){document.getElementById('feltolt').style.display = 'block';}">Játék felvevése</button>
+    <input type="text" placeholder="Keresés" oninput="kereses(this.value,document.getElementsByTagName('h3'))">
+  </div>
+<table id="jatekok" align="center">
+  <thead>
+    <th colspan="2">
+      <h1 id="cim">Játékok</h1>
+    </th>
+  </thead>
+  <tbody id="jat">
+    <tr>
+      <td>
+        <div class="product-card">
+          <h3> Assassin’s Creed: Syndicate </h3>
+          <img src="kepek/acs.jpg" alt="asaincreed" class="kep">
+          <p>Az Assassin’s Creed: Syndicate egy külső nézetes akció, kaland videójáték. Kiadója a Ubisoft. Megjelent 2015. november 19-én PC-re és konzolra. A játék magyar felirattal is rendelkezik. Az Assassin's Creed: Syndicate az Assassin's Creed sorozat 9-dik játéka. A játék jelenkora 2015-ben játszódik</p>
+          
+        </div>
+      </td>
+      <td>
+        <div class="product-card">
+          <h3>Counter-Strike: Global Offensive</h3>
+          <img src="kepek/csgo.jpg" alt="asaincreed" class="kep">
+          <p>A Counter-Strike: Global Offensive online csapatalapú first-person shooter, amelyet a Valve Corporation és a Hidden Path Entertainment fejleszt, akik korábban a Counter-Strike: Source frissítéseiért is feleltek.</p>
+          
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="product-card">
+          <h3>The forest</h3>
+          <img src="kepek/forest.jpg" alt="asaincreed" class="kep">
+          <p>A The Forest egy belső nézetes túlélőhorror videójáték az Endnight Games fejlesztésében Windows platformra. A játék pre-alpha verziója a Steam Early Accessen keresztül jelent meg 2014. május 30-án.</p>
+         
+        </div>
+      </td>
+      <td>
+        <div class="product-card">
+          <h3>Left 4 Dead 2</h3>
+          <img src="kepek/l4d2.jpg" alt="asaincreed" class="kep">
+          <p>A Left 4 Dead 2 egy belső/FPS nézetű akciójáték. A Valve Corporation fejlesztette és adta ki 2009-ben. Európában november 17-én jelent meg. A játék a Source Engine-t használja. Steamen fut. Megjelent Microsoft Windows 2000-re, Windows XP-re, Windows Vistára, Windows 7-re és Xbox 360-ra is. </p>
+          
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="product-card">
+          <h3>League of Legends</h3>
+          <img src="kepek/lol.jpg" alt="asaincreed" class="kep">
+          <p>A League of Legends valós idejű stratégiai játék, illetve online többjátékos csatamező, melyet a Warcraft III: The Frozen Throne videójátékhoz készült Defense of the Ancients mod ihletett. A játék fejlesztője és egyben kiadója a Riot Games; Kínában a Tencent Holdings forgalmazza.</p>
+          
+        </div>
+      </td>
+      <td>
+        <div class="product-card">
+          <h3>Team Fortress 2</h3>
+          <img src="kepek/tf2.jpg" alt="asaincreed" class="kep">
+          <p>A Team Fortress 2 egy ingyenes, csapat-alapú, többjátékos, FPS videójáték, amelyet a Valve Corporation fejlesztett ki, a Team Fortress Classic folytatásaként.</p>
+          
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="product-card">
+          <h3> Phasmophobia</h3>
+          <img src="kepek/phas.jpg" alt="asaincreed" class="kep">
+          <p>A Phasmophobia egy indie túlélőhorror videójáték, amit a Kinetic Games fejlesztett és adott ki.</p>
+          
+        </div>
+      </td>
+      <td>
+        <div class="product-card">
+          <h3>Resident Evil 7</h3>
+          <img src="kepek/revii.jpg" alt="asaincreed" class="kep">
+          <p>A Resident Evil 7: Biohazard a Capcom videójátékgyártó cég Resident Evil című túlélőhorror-sorozatának 7. része.</p>
+          
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="product-card">
+          <h3>Ready or Not</h3>
+          <img src="kepek/ron.jpg" alt="asaincreed" class="kep">
+          <p>A Ready or Not egy taktikai lövöldözősjáték az írországi székhelyű VOID Interactive-tól. A Steam korai hozzáférésen keresztül jelent meg 2021. december 17-én.</p>
+          
+        </div>
+      </td>
+      <td>
+        <div class="product-card">
+          <h3>The Witcher</h3>
+          <img src="kepek/tw3.jpg" alt="asaincreed" class="kep">
+          <p>Angolról fordítva-A The Witcher egy fantasy akció-szerepjáték-sorozat, amelyet a CD Projekt Red fejlesztett és a CD Projekt adott ki. Andrzej Sapkowski lengyel író azonos című könyvsorozatán alapul, amely a könyvek történetének nem kanon</p>
+          
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+
 </html>
