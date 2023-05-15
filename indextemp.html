@@ -31,21 +31,24 @@
     }
     document.cookie = name + "=" + value + expires + "; path=/";
 }
-
-    var k = getCookie("hany")
-  if(k == ""){
-      k = 0 
-  }
   window.onload = gen
   function gen(){
+    function allStorage() {
+      var values = [],
+          keys = Object.keys(localStorage),
+          i = keys.length;
+      while ( i-- ) {
+          values.push( localStorage.getItem(keys[i]) );
+      }
+      return values;
+  }    
     document.getElementById('jat').innerHTML += getCookie("konyvtar")
-    let b = localStorage.getItem('imgData')
-    let c = b.split('***')
     let a = document.getElementsByTagName('img')
-    for(let i = 0; a.length>a;i++){
-      if(a[i].src == ''){
-      a[i].src =  "data:image/png;base64,"+c[0]
-      c = c.slice(1)
+    let j = 0
+    for(let i = 0; a.length>i;i++){          
+      if(!a[i].src){
+      a[i].setAttribute("src",allStorage()[j])
+      j++
       }
     }
   }
@@ -66,6 +69,7 @@
       let sz = document.createTextNode(c)
       h.innerHTML = c
       d.setAttribute('class','product-card')
+      i.setAttribute('id',c)
       p.appendChild(sz)
       const file = kk;
       const reader = new FileReader();
@@ -73,26 +77,25 @@
         i.src = reader.result;
       }
       let asd = reader.readAsDataURL(file);
+      reader.addEventListener('load', () => {
+        localStorage.setItem(c, reader.result);
+      });
       d.appendChild(h)
       d.appendChild(i)
       d.appendChild(p)    
       let td = document.createElement('td')
-      td.appendChild(d)
-
-      if(k % 2 == 0 || k == 0){
+      td.appendChild(d)           
+      if(document.getElementsByTagName('td').length % 2 == 0){
         let tr = document.createElement('tr')
         tr.appendChild(td)
+        createCookie("konyvtar",getCookie('konyvtar')+'</td></tr><tr>'+tr.innerHTML)
         document.getElementById('jat').appendChild(tr)
       }
-      else{  
-        console.log(document.getElementById('jat').children[document.getElementById('jat').children.length-1])
+      else{          
+        createCookie("konyvtar",getCookie('konyvtar')+'</td><td>'+td.innerHTML)
         document.getElementById('jat').children[document.getElementById('jat').children.length-1].appendChild(td)
       }
-      createCookie("konyvtar",getCookie('konyvtar')+td.innerHTML)
-      localStorage.setItem("imgData",localStorage.getItem('imgData')+"***"+document.getElementById('jat').children[document.getElementById('jat').children.length-1].getElementsByTagName('img').src)
-      k++
-      createCookie('hany',k)
-    }
+    }    
       function encryptString(str, key) {
           let result = "";
           for (let i = 0; i < str.length; i++) {
@@ -116,7 +119,6 @@
       }
     }
   }
-  
   function bej(jel){
       if ((jel != null || jel != "" || getCookie('bejelent')== "" || getCookie('bejelent')!= true) && encryptString(jel,encryptionKey) == jelszo ){
         document.cookie = 'bejelent=true;';      
@@ -126,20 +128,6 @@
         alert('Hibás jelszó.')
       }    
     }
-  
-    function L(input,t) {
-      if (input.files && input.files[0]) {
-          console.log(input.files[0].input.files,t,input,document.getElementById(t))
-          var reader = new FileReader();
-          reader.onload = function (e) {
-              $(t).attr('src', e.target.result).width(150).height(200);
-          };
-          reader.readAsDataURL(input.files[0]);
-          document.getElementById(t).src = input.files[0]
-  
-      }
-  }
-  
   </script>
 </head>
 <style>
